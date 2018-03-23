@@ -3733,7 +3733,7 @@ struct target_signal_frame {
 
 struct rt_signal_frame {
     siginfo_t info;
-    struct ucontext uc;
+    struct ucontext_t uc;
     uint32_t tramp[2];
 };
 
@@ -3949,7 +3949,7 @@ struct rt_signal_frame {
     siginfo_t *pinfo;
     void *puc;
     siginfo_t info;
-    struct ucontext uc;
+    struct ucontext_t uc;
     uint16_t retcode[4];      /* Trampoline code. */
 };
 
